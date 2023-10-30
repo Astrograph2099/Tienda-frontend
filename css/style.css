@@ -66,7 +66,42 @@ html{
 
     .header__logo{
         margin: 4rem 0;
+        animation: latido 5s infinite; /* nuestro corazón tiene latidos infinitos */
+
     }
+    .header__logo:before,
+    .header__logo:after {
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    }
+
+    .header__logo:before {
+    top: -25px;
+    left: 0;
+    }
+
+    .header__logo:after {
+    left: 25px;
+    top: 0;
+    }
+
+    @keyframes latido {
+        0%
+        {
+          transform: scale( 1 )   
+        }
+        20%
+        {
+          transform: scale( 1.25 )
+        }
+         40%
+        {
+          transform: scale( 1.5 )
+        }
+      }
+  
 
     /*navegacion*/
     .navegacion{
@@ -236,3 +271,4 @@ html{
   .formulario__opciones{
     color: var(--negro);
   }
+  
